@@ -9,7 +9,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>html-1 · fi3ework&#39;s Studio</title>
+    <title>js总结 · fi3ework&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -191,7 +191,7 @@
                 <a href="/" >fi3ework&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">html-1</a>
+                <a href="#" class="post-name">js总结</a>
             </div>
     </div>
     
@@ -223,7 +223,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            html-1
+            js总结
             <!-- 404 -->
             
         </h1>
@@ -241,7 +241,7 @@ height:50vh;
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/03/29</span>
+                <span class="post-intro-time">2018/03/30</span>
                 
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe602;</span>
@@ -347,26 +347,62 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="html基础"><a href="#html基础" class="headerlink" title="html基础"></a>html基础</h1><h1 id="常见标签"><a href="#常见标签" class="headerlink" title="常见标签"></a>常见标签</h1><ul>
-<li>p  div   a   </li>
+        <h1 id="打卡第二天"><a href="#打卡第二天" class="headerlink" title="打卡第二天"></a>打卡第二天</h1><h1 id="js"><a href="#js" class="headerlink" title="js"></a>js</h1><blockquote>
+</blockquote>
+<ul>
+<li>ECMAScript是一种由Ecma国际前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association，制定的标准。</li>
 </ul>
-<h1 id="基本样式"><a href="#基本样式" class="headerlink" title="基本样式"></a>基本样式</h1><h1 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span>  <span class="title">User</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = name;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>.</p>
+<ul>
+<li>alert()  在页面弹出一个对话框，早期JS调试使用</li>
+</ul>
+<p>.    </p>
+<ul>
+<li>Confirm()  在页面弹出一个对话框, 常配合if判断使用。</li>
+</ul>
+<p>.</p>
+<pre><code>console.log()  将信息输入到控制台，用于js调试。
+</code></pre><p>.</p>
+<ul>
+<li>document.write()在页面输出消息    几乎不用</li>
+</ul>
+<p>document.write不仅能输出信息，还能输出标签。<br>转义字符 \<br>\”   转双引<br>\’转单引<br>\n转换行<br>\r 转回车</p>
+<p>.</p>
+<ul>
+<li><p>break    do    instanceof    typeof<br>case    else    new    var<br>catch    finally    return    void<br>continue    for    switch    while<br>debugger*    function    this    with<br>default    if    throw    delete<br>in    try          </p>
+</li>
+<li><p>abstract    enum    int    short<br>boolean    export    interface    static<br>byte    extends    long    super<br>char    final    native    synchronized<br>class    float    package    throws<br>const    goto    private    transient<br>debugger    implements    protected    volatile<br>double    import    public     </p>
+</li>
+</ul>
+<p>.<br>+</p>
+<h4 id="5-数据类型"><a href="#5-数据类型" class="headerlink" title="5.    数据类型"></a>5.    数据类型</h4><p>5.1    简单数据类型<br>Number   数字类型<br>   包含正数  负数  小数<br>Var   age = 10,<br>Var money = 999999999</p>
+<p>+<br>数字类型的表达方式<br>var  age = 1000;<br>var  number = 20;</p>
+<p>+<br>字符串  String<br>凡是用双引号或者单引号引起的都是字符串。<br>var  name = ‘张三’;<br>var name2 = “李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四”</p>
+<p>+<br>布尔数据类型    Boolean<br>只有2个值一个是true, 一个是false.   实际运算中true=1,false=0<br>约定 男：true ， 女：false;<br>var sex = true; </p>
+<p>+<br>undefined    变量未初始化<br>定义了变量，没有给变量赋值</p>
+<p>null  变量未引用  值为空   object</p>
+<p>+<br>面试：js的基本数据类型有几种?<br>Number  string   Boolean  undefined  null</p>
+<h4 id="5-2-复杂数据类型"><a href="#5-2-复杂数据类型" class="headerlink" title="5.2    复杂数据类型"></a>5.2    复杂数据类型</h4><p> object  对象</p>
+<p> array  数组</p>
+<h4 id="5-4-比较运算符"><a href="#5-4-比较运算符" class="headerlink" title="5.4    比较运算符"></a>5.4    比较运算符</h4><p>&lt;  &gt;   &lt;=  &gt;=   ==  !=</p>
+<p>####</p>
+<blockquote>
+<p>   大于号<br>&lt;    小于号<br>=     大于或等于<br>&lt;=  小于或等于<br>==     等于<br>=== 全等于  首先对比类型，在对比值  在js中  比较一般使用 ===<br>!=    不等于<br>!== 不全等于</p>
+</blockquote>
+<p>#### </p>
+<p>&amp;&amp; 与（且）<br>||    或<br>!    非</p>
+
     </article>
     <!-- 前后页  -->
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/03/29/html-1-1/" title= html-1 >
-                    <div class="nextTitle">html-1</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/03/29/readme/" title= readme >
-                    <div class="prevTitle">readme</div>
+                <a href= "/2018/03/30/1.Html总结/" title=  >
+                    <div class="prevTitle">[Untitled Post]</div>
                 </a>
             
         </li>
@@ -472,7 +508,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#html基础"><span class="toc-number">1.</span> <span class="toc-text">html基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常见标签"><span class="toc-number">2.</span> <span class="toc-text">常见标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本样式"><span class="toc-number">3.</span> <span class="toc-text">基本样式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#javascript"><span class="toc-number">4.</span> <span class="toc-text">javascript</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#打卡第二天"><span class="toc-number">1.</span> <span class="toc-text">打卡第二天</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#js"><span class="toc-number">2.</span> <span class="toc-text">js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-数据类型"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">5.    数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-复杂数据类型"><span class="toc-number">2.0.0.2.</span> <span class="toc-text">5.2    复杂数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-4-比较运算符"><span class="toc-number">2.0.0.3.</span> <span class="toc-text">5.4    比较运算符</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
