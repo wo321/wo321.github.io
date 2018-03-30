@@ -385,11 +385,44 @@ height:50vh;
 <p>如果在不同的地址对同一个仓库进行了不同的修改，可能会出现提交push冲突的问题,解决方法：<br>在提交之前应该先pull把最新代码拉下来并手动合并，“存储commit”之后再次push即可解决</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git push //冲突</span><br><span class="line">git pull  // 拉去最新</span><br><span class="line">// 手动合并</span><br><span class="line">git add .</span><br><span class="line">git commit -m'合并成'   // 注意：本地一定要存储之后才能push</span><br><span class="line">git push  // 解决</span><br></pre></td></tr></table></figure>
+<h2 id="hexo-介绍"><a href="#hexo-介绍" class="headerlink" title="hexo 介绍"></a>hexo 介绍</h2><blockquote>
+<p>简单的快速的markdown博客框架，能够通过markdown语法快速生成页面</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
+<li>前提： node.js、 git</li>
+<li>node.js  是javascript在本地的一个运行环境。</li>
+</ul>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ul>
+<li><p>安装cli</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//npm  node package  manager</span><br><span class="line">// -g </span><br><span class="line">// cli一般指可以通过命令行的库</span><br><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>hexo初始化</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//找到文件夹  </span><br><span class="line">// 通过hexo的命令 在本地创建blog代码框架</span><br><span class="line">hexo init   &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动服务预览</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// 可以在本地启动服务预览</span><br><span class="line">// localhost:4000</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更换皮肤</p>
+</li>
+</ul>
+<ul>
+<li>创建新文件<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new  xxx</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><h3 id="安装依赖库"><a href="#安装依赖库" class="headerlink" title="安装依赖库"></a>安装依赖库</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm  install  hexo-deployer-git  --save</span><br><span class="line">npm  install  hexo-generator-json-content  --save</span><br></pre></td></tr></table></figure>
+<h3 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">把当前本地博客代码跟git仓库关联起来</span><br><span class="line">注意：必须是可以被发布的那个仓库地址</span><br><span class="line">找到当前博客的_config.yml</span><br><span class="line">注意缩进</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h3 id="把md文件生成为index静态文件"><a href="#把md文件生成为index静态文件" class="headerlink" title="把md文件生成为index静态文件"></a>把md文件生成为index静态文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//把md生成到 public下</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="发布-1"><a href="#发布-1" class="headerlink" title="发布"></a>发布</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//作用是通过hexo命令 执行了git命令 把本地的public下的内容push到github仓库</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/03/30/github安装步骤-md/" title= github安装步骤.md >
+                    <div class="nextTitle">github安装步骤.md</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -502,7 +535,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#git"><span class="toc-number">1.</span> <span class="toc-text">git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#git安装"><span class="toc-number">1.1.</span> <span class="toc-text">git安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本操作"><span class="toc-number">1.2.</span> <span class="toc-text">基本操作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#github"><span class="toc-number">2.</span> <span class="toc-text">github</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#注册账号"><span class="toc-number">2.1.</span> <span class="toc-text">注册账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建一个仓库"><span class="toc-number">2.2.</span> <span class="toc-text">创建一个仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新的环境clone项目"><span class="toc-number">2.3.</span> <span class="toc-text">新的环境clone项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#冲突问题"><span class="toc-number">2.4.</span> <span class="toc-text">冲突问题</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#git"><span class="toc-number">1.</span> <span class="toc-text">git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#git安装"><span class="toc-number">1.1.</span> <span class="toc-text">git安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本操作"><span class="toc-number">1.2.</span> <span class="toc-text">基本操作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#github"><span class="toc-number">2.</span> <span class="toc-text">github</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#注册账号"><span class="toc-number">2.1.</span> <span class="toc-text">注册账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建一个仓库"><span class="toc-number">2.2.</span> <span class="toc-text">创建一个仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新的环境clone项目"><span class="toc-number">2.3.</span> <span class="toc-text">新的环境clone项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#冲突问题"><span class="toc-number">2.4.</span> <span class="toc-text">冲突问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-介绍"><span class="toc-number">2.5.</span> <span class="toc-text">hexo 介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">2.6.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#步骤"><span class="toc-number">2.7.</span> <span class="toc-text">步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发布"><span class="toc-number">2.8.</span> <span class="toc-text">发布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖库"><span class="toc-number">2.8.1.</span> <span class="toc-text">安装依赖库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置git"><span class="toc-number">2.8.2.</span> <span class="toc-text">配置git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#把md文件生成为index静态文件"><span class="toc-number">2.8.3.</span> <span class="toc-text">把md文件生成为index静态文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#发布-1"><span class="toc-number">2.8.4.</span> <span class="toc-text">发布</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -565,8 +598,7 @@ top:50vh;
     
     
     
-    
-    <div class="total-archive"> Total : 5 </div>
+    <div class="total-archive"> Total : 6 </div>
     
     <div class="post-archive">
     
@@ -575,6 +607,11 @@ top:50vh;
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/30</span><a class="archive-post-title" href= "/2018/03/30/github安装步骤-md/" >github安装步骤.md</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -593,12 +630,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/29</span><a class="archive-post-title" href= "/2018/03/29/html-1/" >html-1</a>
+            <span class="archive-post-date">03/29</span><a class="archive-post-title" href= "/2018/03/29/readme/" >readme</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/29</span><a class="archive-post-title" href= "/2018/03/29/readme/" >readme</a>
+            <span class="archive-post-date">03/29</span><a class="archive-post-title" href= "/2018/03/29/html-1/" >html-1</a>
         </li>
     
     </div>
