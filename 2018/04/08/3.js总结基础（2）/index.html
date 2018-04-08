@@ -9,7 +9,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>html-1 · fi3ework&#39;s Studio</title>
+    <title>fi3ework&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -191,7 +191,7 @@
                 <a href="/" >fi3ework&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">html-1</a>
+                <a href="#" class="post-name"></a>
             </div>
     </div>
     
@@ -223,7 +223,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            html-1
+            [Untitled Post]
             <!-- 404 -->
             
         </h1>
@@ -241,7 +241,7 @@ height:50vh;
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/03/29</span>
+                <span class="post-intro-time">2018/04/08</span>
                 
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe602;</span>
@@ -347,25 +347,105 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>yy blog-博客</p>
-<p>记住你的美，好滴，大家好，才是真的好<br>打卡第一天</p>
+        <p># </p>
+<blockquote>
+</blockquote>
+<p>  if语句<br>1    if(明天不下雨){<br>2        我就出去玩；<br>3    }else{<br>4        我就在家写作业;5    }</p>
+<blockquote>
+</blockquote>
+<p>多分支的if语句和跳楼现象</p>
+<blockquote>
+</blockquote>
+<p>1    if(条件表达式1){<br>2        条件1为真的时候做的时候<br>3    }else if(条件表达式2){<br>4        条件1不满足，条件2满足的时候做的事情<br>5    }else if(条件表达式3){<br>6        条件1、2不满足，条件3满足的时候做的事情<br>7    }else{<br>8        全都不满足的时候做的事情9    }</p>
+<blockquote>
+</blockquote>
+<p>三元运算符<br>rs=5&lt;3?’明天不上课！’：’明天上课！’;<br>var sex=false?’男’：’女’;<br>alert(sex);</p>
+<blockquote>
+</blockquote>
+<p> 准确遍历for循环<br>人，要去分析程序的运行，走向。<br>1        <script type="text/javascript"><br>2            for(var i = 1 ; i &lt; 13 ; i = i + 4){<br>3                console.log(i);<br>4            }<br>5        </script></p>
+<blockquote>
+</blockquote>
+<p>Switch语句<br>    ☞语法<br>  Switch(变量n){<br>          case  10:<br>                 执行的代码;<br>          break;<br>                 case  20:<br>                  执行的代码;<br>           break;<br>           default:<br>                  执行的代码;<br>            break;</p>
+<p>  }</p>
+<blockquote>
+<p>Do..while循环<br>   ☞语法<br> Do{<br>        循环体;<br> }while(条件表达式);</p>
+</blockquote>
+<blockquote>
+<p>For循环<br>    ☞用法<br>    for(var i=0; i&lt;=10; i++){<br>                 循环体代码<br>    }</p>
+</blockquote>
+<pre><code>&gt;
 
+数组（定义，赋值，取值）
+8.1 定义 
+</code></pre><p>var  arr = new Array();    //通过对象方式创建数组<br>var arr = []  //直接创建数组</p>
+<p>.</p>
+<p>join()<br>作用是将数组各个元素是通过指定的分隔符进行连接成为一个字符串。</p>
+<p>.</p>
+<p>冒泡算法和选择排序<br>冒泡排序算法的运作如下：（从后往前）</p>
+<ol>
+<li>比较相邻的元素。如果第一个比第二个大，就交换他们两个。</li>
+<li>对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。</li>
+<li>针对所有的元素重复以上的步骤，除了最后一个。</li>
+<li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较</li>
+</ol>
+<p>.</p>
+<p><title>冒泡</title><br>    <script type="text/javascript"><br>        var a = [55,33,12,31,9];<br>        console.log(‘ol==&gt;’+a);</p>
+<pre><code>    for(var i = 0 ; i &lt; a.length -1 ; i ++){
+            for(var j = 0 ; j &lt; a.length-i-1 ; j ++){
+                if(a[j]&gt;a[j+1]){
+                    var temp = a[j];
+                    a[j] = a[j+1];
+                    a[j+1] = temp;
+                }
+            }
+            console.log(i+&apos;==&gt;&apos;+a)
+
+    }
+    console.log(a)
+&lt;/script&gt;
+</code></pre><p>选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。</p>
+<p>var minIndex = 0 ;<br>        for(var j = 0 ; j &lt; a.length ; j ++){</p>
+<pre><code>    minIndex = j;
+    for(var i = j+1 ; i &lt; a.length ; i ++){
+        if(a[i]&lt;a[minIndex]){
+            minIndex = i;
+        }
+    }
+    if(j != minIndex){
+        var temp = a[j];
+        a[j] = a[minIndex];
+        a[minIndex] = temp;
+    }
+    console.log(i+&apos;==&gt;&apos;+a);
+
+}
+</code></pre><p>.</p>
+<p>自定义函数声明<br>function a(){<br>    alert(“我是自定义函数”)<br>}<br>a(); </p>
+<p>.</p>
+<p>1：此时a函数是变量的结果，默认存储在全局上下文的变量中(可用 window.函数名 来验证)<br>　　2：此方式为函数声明，在进入全局上下文阶段创建。<br>　　3：它可以影响变量对象（仅影响存储在上下文中的变量）<br>9.1.2 匿名函数声明 – 函数表达式<br>var a = function(){<br>    alert(“直接量声明”)<br>}<br>a();  也需要调用<br>总结：<br>　　1：首先变量本身不做为一个函数存在，而是一个匿名函数的引用（值类型的不属于引用）<br>　　   2：在代码执行阶段，初始化全局上下文时，它没有被做为全局的一个属性而存在，所以不会造成变量对象的污染<br>　　3：该类型的声明一般在插件的开发比较常见，也可做为闭包中回调函数的调用</p>
+<p>.</p>
+<p>变量和作用域（隐式全局变量和变量声明提升）<br>4.1变量作用域<br>一、全局变量（成员变量）<br>哪里都可以访问到的变量。<br>二、局部变量<br>函数内部的变量，只有函数内部可以访问到。<br>（函数内部用var定义的变量和形参）</p>
+<p>.</p>
+<p>    函数不调用不执行<br>    函数名就等于（整个函数）<br>    参数相当于局部变量<br>    就近原则使用变量<br>    两个平级的函数中的变量不会相互影响（可以使用同样的形参名）</p>
+<p>.</p>
+<p>Java/c  js 会有一个Object对象 ，是一个基类。<br>所有的对象都是继承自Object对象的<br>7.1    创建空白对象<br>    var  obj  =  new  Object();</p>
+</script></p>
     </article>
     <!-- 前后页  -->
     <ul class="post-paginator">
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/03/29/hello-world/" title= Hello World >
-                    <div class="nextTitle">Hello World</div>
+                <a href= "/2018/04/08/3-js总基础二/" title= 3.js总基础二 >
+                    <div class="nextTitle">3.js总基础二</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/03/29/html-1/" title= html-1 >
-                    <div class="prevTitle">html-1</div>
+                <a href= "/2018/03/30/2-css总结-md/" title= 2.css总结.md >
+                    <div class="prevTitle">2.css总结.md</div>
                 </a>
             
         </li>
