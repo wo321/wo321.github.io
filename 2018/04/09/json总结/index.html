@@ -9,7 +9,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>1.Html总结.md · fi3ework&#39;s Studio</title>
+    <title>json总结 · fi3ework&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -191,7 +191,7 @@
                 <a href="/" >fi3ework&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">1.Html总结.md</a>
+                <a href="#" class="post-name">json总结</a>
             </div>
     </div>
     
@@ -223,7 +223,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            1.Html总结.md
+            json总结
             <!-- 404 -->
             
         </h1>
@@ -239,9 +239,15 @@ height:50vh;
         
             <!-- 文章页标签  -->
             
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "打卡第四天">打卡第四天</a>
+    
+</div>
+            
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/03/30</span>
+                <span class="post-intro-time">2018/04/09</span>
                 
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe602;</span>
@@ -347,44 +353,44 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>##基础标签</p>
-<p>+<br>快捷键</p>
-<p>Html:xt+tab    Html4结构代码<br>!+tab    Html5结构代码<br>tab    补全标签代码<br>Ctrl+shift+d    快速复制一行<br>Ctrl+shiif+k    快速删除一行<br>Ctrl+鼠标左键单击    集体输入<br>Ctrl+n    新建文件<br>Ctrl+h    查找替换(alt+f3全选)<br>Ctrl+f    查找<br>Ctrl+/    注释<br>Ctrl+L    快速选择一行<br>Ctrl+shift+↑（↓）    快速上移（下移）一行<br>F11    全屏</p>
-<p>+<br>路径</p>
-<p>1.相对于文件自身出发，就是相对路径。</p>
-<p>2.文件和图片（html文档）在同一个目录(文件夹) ，直接写文件名。</p>
-<p>3.图片（html文档）在文件在下一级目录里。文件夹名称+/+图片（html）名称</p>
-<p>4.图片（html）在文件的上一级目录里，..+/+图片（html）名称</p>
-<p>5.图片在文件的上一级的其他目录里，../文件夹名称/图片名称</p>
-<p>6.文件和图片（html文档）在同一个目录(文件夹) ，直接写文件名。</p>
-<p>+<br>表格</p>
-<p>表格    <table><br>行  <tr><br>表头  <th><br>列    </th><td></td></tr></table></p>
-<p>+</p>
-<p>Colspan  使多列个合并<br>Rowspan  使多个行合并</p>
-<p>+</p>
-<p>下拉框<select>  <option>北京</option> </select><br>selected<br>multiple=”multiple”</p>
-<p>+</p>
-<p><input type="”file”"><br>表单分组 <fieldset>   <legend> </legend>   </fieldset></p>
-<p>+<br>多行文本框textarea<br>Rows   行<br>Cols  列</p>
-<p> #</p>
-<p>+</p>
-<textarea cols="" rows=""></textarea>
+        <h3 id="Json"><a href="#Json" class="headerlink" title="Json"></a>Json</h3><ul>
+<li>json可以是什么类型的？<ul>
+<li>答：基本数据类型，对象类型，数组类型，json类型。</li>
+<li>基于json的值可以为任意（function除外），所以json可以描述非常复杂的数据格式。<h4 id="把对象类型转换为Json类型"><a href="#把对象类型转换为Json类型" class="headerlink" title="把对象类型转换为Json类型"></a>把对象类型转换为Json类型</h4></li>
+</ul>
+</li>
+<li>Json.stringify–&gt;把对象转换为json类型<h4 id="把Json字符串类型转换为对象类型"><a href="#把Json字符串类型转换为对象类型" class="headerlink" title="把Json字符串类型转换为对象类型"></a>把Json字符串类型转换为对象类型</h4></li>
+<li>JSON.parse(userJsonStr)==&gt;把json的字符串类型转换为对象类型<h4 id="Json的遍历"><a href="#Json的遍历" class="headerlink" title="Json的遍历"></a>Json的遍历</h4></li>
+<li>注意</li>
+<li>数组的遍历有两种形式，一种是for(var i=0;i&lt;arr.length;i++),另一种for(var a in arr){…}</li>
+<li>for…in的形式一般用于遍历对象</li>
+<li>注意：console.log(a);<br>取对象的属性一般使用. 的形式，尤其注意如果属性是一个变量 或者字符串，那么需要使用[XX]的形式来取<h4 id="数组转化为字符串"><a href="#数组转化为字符串" class="headerlink" title="数组转化为字符串"></a>数组转化为字符串</h4></li>
+<li>tostring把数组转化为字符串</li>
+<li>sort 排序：是参考字典排序。<h4 id="数组高级内置方法"><a href="#数组高级内置方法" class="headerlink" title="数组高级内置方法"></a>数组高级内置方法</h4></li>
+<li>indexof获取某个值的下标位置</li>
+<li>slice(start,end)[start,end)获取不影响原来元素</li>
+<li>splice(start,count)从下标为start开始，截取count个元素，影响原来元素</li>
+<li>splice 常用于删除数组的某一个元素</li>
+<li><h4 id="清空数组"><a href="#清空数组" class="headerlink" title="清空数组"></a>清空数组</h4></li>
+<li>nameArr=[];这种方式可以，但在vue或者其他框架中无法监听，可能会出错<h4 id="拼接concat"><a href="#拼接concat" class="headerlink" title="拼接concat"></a>拼接concat</h4><h4 id="substr一般用于字符串截取"><a href="#substr一般用于字符串截取" class="headerlink" title="substr一般用于字符串截取"></a>substr一般用于字符串截取</h4></li>
+</ul>
+
     </article>
     <!-- 前后页  -->
     <ul class="post-paginator">
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/03/30/2-css总结-md/" title= 2.css总结.md >
-                    <div class="nextTitle">2.css总结.md</div>
+                <a href= "/2018/04/09/json总结(1)/" title=  >
+                    <div class="nextTitle">[Untitled Post]</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/03/30/js总结/" title= js总结 >
-                    <div class="prevTitle">js总结</div>
+                <a href= "/2018/04/08/3.js总结基础（2）/" title= js总结(2) >
+                    <div class="prevTitle">js总结(2)</div>
                 </a>
             
         </li>
@@ -490,7 +496,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Json"><span class="toc-number">1.</span> <span class="toc-text">Json</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#把对象类型转换为Json类型"><span class="toc-number">1.1.</span> <span class="toc-text">把对象类型转换为Json类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#把Json字符串类型转换为对象类型"><span class="toc-number">1.2.</span> <span class="toc-text">把Json字符串类型转换为对象类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Json的遍历"><span class="toc-number">1.3.</span> <span class="toc-text">Json的遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组转化为字符串"><span class="toc-number">1.4.</span> <span class="toc-text">数组转化为字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组高级内置方法"><span class="toc-number">1.5.</span> <span class="toc-text">数组高级内置方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#清空数组"><span class="toc-number">1.6.</span> <span class="toc-text">清空数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#拼接concat"><span class="toc-number">1.7.</span> <span class="toc-text">拼接concat</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#substr一般用于字符串截取"><span class="toc-number">1.8.</span> <span class="toc-text">substr一般用于字符串截取</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
