@@ -300,22 +300,31 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/09/json总结(1)/" >
+            <a class="abstract-title" href = "/2018/04/09/3-js总结（3）/" >
                 
-                    <span>[Untitled Post]</span>
+                    <span>3.js总结（3）</span>
             </a>
             <div class="abstract-content">
-                Json
-json可以是什么类型的？
-答：基本数据类型，对象类型，数组类型，json类型。
-基于json的值可以为任意（function除外），所以json可以描述非常复杂的数据格式。把对象类型转换为Json类型
+                函数script中函数
+script的执行函数是window对象
+在js中所有的数据类型都用var声明
+例如：var name=’张三’;
+函数是使用function声明
+函数只声明不调用时不会执行的。
+函数一般是我们封装的，一部功能的代码块，帮我们完成特定工作。
+目前来说自定义的函数不要写成大写开头。自定义函数
+var name=’张三’;
+function say(){
+alert(‘Hi,’+name);
+}
+say();匿名函数
+var who=function(){
+alert(‘who am I?’);
+}
 
 
-Json.stringify–&gt;把对象转换为json类型把Json字符串类型转换为对象类型
-JSON.parse(userJsonStr)==&gt;把json的字符串类型转换为对象类型Json的遍历
-注意
-数组的遍历有两种形式，一种是for(var i=0;i&lt;arr.length;i++),另一种for(var a in arr){…}
-for…in的形式一...
+who();自定义函数声明和匿名函数声明的区别
+自定义函数可以先...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -737,16 +746,6 @@ More...
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-archive"> Total : 9 </div>
     
     <div class="post-archive">
@@ -759,7 +758,7 @@ More...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/09</span><a class="archive-post-title" href= "/2018/04/09/json总结(1)/" >[Untitled Post]</a>
+            <span class="archive-post-date">04/09</span><a class="archive-post-title" href= "/2018/04/09/3-js总结（3）/" >3.js总结（3）</a>
         </li>
     
     
@@ -806,8 +805,6 @@ More...
   </div>
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
-    
-        <span class="sidebar-tag-name" data-tags="打卡第四天"><span class="iconfont-archer">&#xe606;</span>打卡第四天</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
